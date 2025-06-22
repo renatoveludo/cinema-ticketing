@@ -40,4 +40,4 @@ Este é um sistema full stack para **reserva de ingressos de cinema**, onde usu�
 
 👨‍💻 Desenvolvido por
 Renato
-💼 GitHub: 
+💼 GitHub: [github.com/renatoveludo]
