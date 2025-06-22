@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  border-bottom: 2px solid #ffc300;
+
+  &__title {
+    text-shadow:
+      0 0 5px #ffd60a,
+      0 0 10px #ffb703,
+      0 0 20px #ffb703,
+      0 0 40px #ffaa00;
+    font-weight: bold;
+    font-size: 62px;
+  }
+
+  &__back {
+    position: absolute;
+    left: 40px;
+    top: 40px;    
+    font-size: 36px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+}

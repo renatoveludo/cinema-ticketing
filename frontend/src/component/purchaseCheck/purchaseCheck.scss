@@ -1,0 +1,53 @@
+.purchaseCheck {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+
+    input {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid #ffc300;
+      background-color: #222;
+      color: #ffc300;
+      font-size: 16px;
+
+      &::placeholder {
+        color: #f0c93dcc;
+      }
+    }
+
+    button {
+      padding: 8px 18px;
+      background-color: #ffc300;
+      color: #222;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #e6b700;
+      }
+    }
+  }
+
+  &__error {
+    color: #ff4d4d;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,49 @@
+@import '../../utils/variables.scss';
+
+.moviePage {
+  padding: 0 300px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  animation: slideInLeft 1.0s ease forwards;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+  
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+
+  }
+  &__card {
+    width: 200px;
+    border: 2px solid #ffc300;
+    box-shadow:
+      0 0 5px #ffc300,
+      0 0 10px #ffb703,
+      0 0 15px #ff9500;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+
+}
+
