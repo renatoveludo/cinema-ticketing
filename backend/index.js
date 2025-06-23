@@ -3,7 +3,7 @@ const cors = require('cors');
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 const app = express();
-const isValidCPF = require('./utils/isValidCPF');
+const isValidCPF = require('./utils/isvalidcpf');
 
 app.use(cors());
 app.use(express.json());
