@@ -10,7 +10,7 @@ function PurchaseResult({ purchase, onSeatRemoved }) {
     setRemovingSeatId(seatId);
 
     try {
-      const res = await fetch(`http://localhost:4000/seats/${seatId}`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/seats/${seatId}`, {
         method: 'DELETE',
       });
 
@@ -29,7 +29,7 @@ function PurchaseResult({ purchase, onSeatRemoved }) {
 
   async function handleBackToMovies() {
     try {
-      await fetch(`http://localhost:4000/cleanup-empty-sessions/${purchase.cpf}`, {
+      await fetch(`${import.meta.env.VITE_API_URL}/cleanup-empty-sessions/${purchase.cpf}`, {
         method: 'DELETE',
       });
     } catch {

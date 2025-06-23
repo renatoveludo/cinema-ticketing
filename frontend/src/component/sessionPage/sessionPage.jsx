@@ -12,7 +12,7 @@ function SessionPage({ setSelectedMovieId, setSelectedSessionTime, setSelectedDa
   
   useEffect(() => {
     setSelectedMovieId(movieId);
-    fetch(`http://localhost:4000/sessions/${movieId}`)
+    fetch(`${import.meta.env.VITE_API_URL}/sessions/${movieId}`)
       .then(res => res.json())
       .then(data => setSessions(data));
   }, [movieId, setSelectedMovieId]);

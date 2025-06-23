@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import PurchaseResult from '../component/purchaseResult/purchaseResult';
+import PurchaseResult from '../purchaseResult/purchaseResult';
 
 function PurchaseResultPage() {
   const { cpf } = useParams();
@@ -9,7 +9,7 @@ function PurchaseResultPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/purchases/${cpf}`)
+    fetch(`${import.meta.env.VITE_API_URL}/purchases/${cpf}`)
       .then(res => {
         if (!res.ok) throw new Error('Compra não encontrada');
         return res.json();
@@ -19,6 +19,7 @@ function PurchaseResultPage() {
         setLoading(false);
       })
       .catch(err => {
+        console.error('Erro na API:', err);
         setError(err.message);
         setLoading(false);
       });

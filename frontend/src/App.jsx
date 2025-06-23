@@ -8,7 +8,7 @@ import SessionPage from './component/sessionPage/sessionPage';
 import Footer from './component/footer/footer';
 import SeatPage from './component/seatPage/seatPage';
 import TicketPage from './component/ticketPage/ticketPage';
-import PurchaseResultPage from './purchaseResultPage/purchaseResultPage';
+import PurchaseResultPage from './component/purchaseResultPage/purchaseResultPage';
 
 import './App.scss';
 
@@ -23,7 +23,7 @@ function App() {
     location.pathname.startsWith('/sessions') || location.pathname.startsWith('/seat');
 
   useEffect(() => {
-    fetch('http://localhost:4000/movies')
+    fetch(`${import.meta.env.VITE_API_URL}/movies`)
       .then(res => res.json())
       .then(data => setMovies(data));
   }, []);

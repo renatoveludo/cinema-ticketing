@@ -18,7 +18,7 @@ function TicketPage() {
       return;
     }
 
-    fetch(`http://localhost:4000/purchase/${cpf}/${sessionId}`) 
+    fetch(`${import.meta.env.VITE_API_URL}/purchase/${cpf}/${sessionId}`) 
       .then(res => {
         if (!res.ok) throw new Error('Compra não encontrada');
         return res.json();

@@ -17,7 +17,7 @@ function SeatPage() {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/seats/${sessionId}`)
+    fetch(`${import.meta.env.VITE_API_URL}/seats/${sessionId}`)
       .then(res => res.json())
       .then(data => {
         console.log('Assentos recebidos:', data);
@@ -39,7 +39,7 @@ function SeatPage() {
       return;
     }
 
-    fetch('http://localhost:4000/reserve', {
+    fetch(`${import.meta.env.VITE_API_URL}/reserve`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, cpf, sessionId: Number(sessionId), seatIds: selectedSeats }),

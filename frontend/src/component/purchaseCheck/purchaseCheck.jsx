@@ -17,7 +17,7 @@ function PurchaseCheck() {
     }
 
     try {
-      const res = await fetch(`http://localhost:4000/purchases/${cpf}`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/purchases/${cpf}`);
       if (!res.ok) {
         if (res.status === 404) {
           setError('Nenhuma compra encontrada para este CPF.');
