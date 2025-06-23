@@ -23,4 +23,5 @@ function isValidCPF(cpf) {
   return rev === parseInt(cpf.charAt(10));
 }
 
+
 module.exports = isValidCPF;
