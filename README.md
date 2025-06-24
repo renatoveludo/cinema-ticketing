@@ -42,4 +42,6 @@ Este é um sistema full stack para **reserva de ingressos de cinema**, onde usu�
 Renato
 💼 GitHub: [github.com/renatoveludo]
 
-Teste WebPage (Hospedado Vercel): https://cinema-ticketing-5o87p25r2-renato-veludos-projects.vercel.app/
+Frontend (Hospedado Vercel): [https://cinema-ticketing-7tqw1qt4d-renato-veludos-projects.vercel.app/]
+
+Backend (Hospedado RailWay): (Banco de dados alterado de SQLite para Postgres para integrar ao RailWay)
